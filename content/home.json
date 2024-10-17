@@ -1,0 +1,146 @@
+{
+  "meta_title": "",
+  "meta_description": "",
+  "sections": [
+    {
+      "type": "apx_banners-grid",
+      "grid": "3",
+      "banners": [
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/image.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/image.png"
+          }
+        },
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/image-1-.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/image-1-.png"
+          }
+        }
+      ],
+      "breakline": "false",
+      "container": "container_90"
+    },
+    {
+      "type": "apx_list-images",
+      "container": "container_90",
+      "banners": [
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        }
+      ]
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 13,
+      "page": 1,
+      "collection_id": "65f1eea287ab487fbfe4252b:categories:Promoções:/promocoes",
+      "sort": "views",
+      "title": "Promoções",
+      "link": "/promocoes"
+    },
+    {
+      "type": "apx_banners-grid",
+      "container": "container_90",
+      "breakline": "true",
+      "banners": [
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          }
+        }
+      ],
+      "grid": "5"
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 15,
+      "page": 1,
+      "collection_id": "65f1ee9787ab487fbfe42510:categories:Livros:/livros",
+      "sort": "sales",
+      "title": "Mais Vendidos",
+      "link": "/mais-vendidos"
+    },
+    {
+      "type": "apx_list-images",
+      "container": "container_90",
+      "title": "Autores em Destaque",
+      "link": "/autores",
+      "banners": [
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        }
+      ]
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/430x280.png"
+        },
+        {
+          "img": "/img/uploads/430x280.png"
+        },
+        {
+          "img": "/img/uploads/430x280.png"
+        }
+      ]
+    },
+    {
+      "type": "offers-timer",
+      "max_hours": 48,
+      "start": "2024-03-20T02:46:44.975Z",
+      "end": "2024-04-05T02:46:44.988Z",
+      "offers": [
+        "65f1f14587ab487fbfe42c16",
+        "65f1f14587ab487fbfe42c16",
+        "65f1f14587ab487fbfe42c16",
+        "65f1f14587ab487fbfe42c16",
+        "65f1f14587ab487fbfe42c16"
+      ]
+    },
+    {
+      "type": "apx_responsive-banner",
+      "desktop": {
+        "animate": "fadeInUp",
+        "img": "/img/uploads/group-24.png",
+        "content_order": "left_image",
+        "btn_url": "/biblias",
+        "mask_color": "#084f53",
+        "btn_text": "Ver Catálogo",
+        "btn_text_color": "#ffffff",
+        "mask_opacity": 0,
+        "title": "Fortaleça seu relacionamento com Deus",
+        "title_color": "#ffffff"
+      },
+      "mobile": {
+        "mask_opacity": 0,
+        "img": "/img/uploads/group-24.png",
+        "content_order": "before_image",
+        "mask_color": "#084f53",
+        "animate": "fadeInLeft"
+      },
+      "container": "container_90",
+      "padding": "px-0"
+    }
+  ]
+}
