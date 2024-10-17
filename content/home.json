@@ -1,0 +1,238 @@
+{
+  "meta_title": "",
+  "meta_description": "",
+  "sections": [
+    {
+      "type": "apx_banners-grid",
+      "grid": "3",
+      "banners": [
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/image.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/image.png"
+          }
+        },
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/image-1-.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/image-1-.png"
+          }
+        }
+      ],
+      "breakline": "false",
+      "container": "container"
+    },
+    {
+      "type": "apx_list-images",
+      "container": "container",
+      "banners": [
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        }
+      ]
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 15,
+      "page": 1,
+      "collection_id": "65f1ee9787ab487fbfe42510:categories:Livros:/livros",
+      "sort": "sales",
+      "title": "Promoções",
+      "link": "/mais-vendidos"
+    },
+    {
+      "type": "apx_banners-grid",
+      "banners": [
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          }
+        },
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          }
+        },
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          }
+        },
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          }
+        }
+      ],
+      "grid": "5",
+      "breakline": "false",
+      "container": "container"
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 15,
+      "page": 1,
+      "collection_id": "65f1ee9787ab487fbfe42510:categories:Livros:/livros",
+      "sort": "sales",
+      "title": "Mais Vendidos",
+      "link": "/mais-vendidos"
+    },
+    {
+      "type": "apx_list-images",
+      "container": "container",
+      "title": "Autores em Destaque",
+      "link": "/autores",
+      "spacing":{
+        "container":"container",
+        "desktop":{
+          "margin_top":"4",
+          "margin_bottom":"4",
+          "padding_top":"3",
+          "padding_bottom":"3"
+        },
+        "mobile":{
+          "margin_top":"4",
+          "margin_bottom":"4",
+          "padding_top":"3",
+          "padding_bottom":"3"
+        }
+      },
+      "banners": [
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        },
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        },
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        },
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        },
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        },
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        },
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        },
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        }
+      ]
+    },
+   
+    {
+      "type": "apx_responsive-banner",
+      "desktop": {
+        "animate": "fadeInUp",
+        "img": "/img/uploads/group-24.png",
+        "content_order": "left_image",
+        "btn_url": "/biblias",
+        "mask_color": "#084f53",
+        "btn_text": "Ver Catálogo",
+        "btn_text_color": "#ffffff",
+        "description_color": "#ffffff",
+        "mask_opacity": 0,
+        "title": "Fortaleça seu relacionamento com Deus",
+        "title_color": "#ffffff",
+        "description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. "
+      },
+      "mobile": {
+        "animate": "fadeInUp",
+        "img": "/img/uploads/group-24.png",
+        "content_order": "left_image",
+        "btn_url": "/biblias",
+        "mask_color": "#084f53",
+        "btn_text": "Ver Catálogo",
+        "btn_text_color": "#ffffff",
+        "description_color": "#ffffff",
+        "mask_opacity": 0,
+        "title": "Fortaleça seu relacionamento com Deus",
+        "title_color": "#ffffff",
+        "description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. "
+     
+      },
+      "container": "container_90",
+      "padding": "px-0"
+    }
+  ]
+}
