@@ -1,0 +1,44 @@
+<%
+if (Array.isArray(opt.offers) && opt.offers.length) {
+  const search = new _.EcomSearch()
+  let items
+  try {
+    await search.setProductIds(opt.offers).fetch(true)
+    items = search.getItems().filter(item => _.ecomUtils.inStock(item))
+  } catch (err) {
+    console.error(err)
+    items = []
+  }
+
+  if (items.length) {
+    %>
+    <div class="bg-timer">
+    <section class="products-carousel offers-timer py-4 my-lg-5">
+        <div class="d-flex justify-content-between align-items-center pt-md-5 pt-4 pb-4">
+          <h4 class="products-carousel__title font-weight-700">
+            ⚡Oferta Relâmpago
+          </h4>
+         
+    
+          <div>
+            <%- await include('@/sections/inc/timer', { _, opt }) %>
+          </div>
+        </div>
+        <div class="pb-5">
+        <ul class="ul__slides products-carousel__list">
+          <% for (let i = 0; i < items.length; i++) { %>
+            <li class="ul__slide products-carousel__item">
+              <%- await include('@/sections/inc/product-item', {
+                _, opt: { item: items[i] }
+              }) %>
+            </li>
+          <% } %>
+        </ul>        
+      </div>
+      
+    </section>
+  </div>
+    <%
+  }
+}
+%>

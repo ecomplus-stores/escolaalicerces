@@ -1,0 +1,14 @@
+{
+  "pkg": "@ecomplus/widget-tag-manager",
+  "active": true,
+  "desktopOnly": false,
+  "enableCheckout": true,
+  "options": {
+    "gtmContainerId": "GTM-PJ2TK2R",
+    "dataLayerVar": "dataLayer",
+    "partytown": false,
+    "isDebug": true
+  },
+  "headAppend": "src/append/head",
+  "bodyAppend": "src/append/body"
+}

@@ -1,0 +1,229 @@
+<%
+
+
+
+
+// load menu options and contacts from content
+const menu = _.cms('menu') || {}
+const contacts = _.cms('contacts') || {}
+
+// some social networks handled by contacts
+const networksWithColors = [
+  ['facebook', '#3b5998'],
+  ['youtube', '#ff0000'],
+  ['instagram', '#e1306c'],
+  ['twitter', '#1da1f2']
+]
+
+// start grouping categories by parent slug
+const allCategories = menu.alphabetical_order
+  ? _.lodash.sortBy(_.categories, ['name'])
+  : _.categories
+const categoryParents = await _.lodash.groupBy(allCategories, ({ parent }) => {
+  return !parent || !parent.slug ? '_' : parent.slug
+})
+
+const getSubmenuId = slug => `a-${slug.replace(/\//g, '_')}`
+
+const mainCategories = categoryParents._
+if (mainCategories) {
+  if (Array.isArray(menu.sort_categories)) {
+    // reorder first level categories list
+    for (let i = menu.sort_categories.length - 1; i >= 0; i--) {
+      const slug = menu.sort_categories[i]
+      const categoryIndex = mainCategories.findIndex(category => category.slug === slug)
+      if (categoryIndex > -1) {
+        const category = mainCategories[categoryIndex]
+        mainCategories.splice(categoryIndex, 1)
+        mainCategories.unshift(category)
+      }
+    }
+  }
+}
+
+
+let brands
+const params = {
+  sort:'name'
+};
+
+
+const { data } = await _.ecomClient.store({
+  url: '/brands',
+  axiosConfig: {
+    params
+  }
+})
+brands = data.result.map(item => ({
+  ...item,
+  parent: {
+    _id: 'x',
+    name: 'Editoras',
+    slug: 'editoras'
+  }
+}));
+
+%>
+
+<aside id="menu" class="menu shadow">
+  <nav class="accordion" id="accordion-menu">
+    <!-- <div class="card-header">
+      <div class="row apx-side-heading">
+        <div class="col">
+          <span>Menu</span>
+        </div>
+        <div class="col-auto">
+          <button
+      class="menu__btn menu__btn--close btn"
+      type="button"
+      onclick="toggleSidenav()"
+      aria-label="Toggle Side Navigation"
+    >
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18M6 6L18 18" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </button>
+        </div>
+      </div>
+    </div> -->
+    
+    <div id="a-editoras"
+    class="collapse" aria-expanded="false" data-parent="#accordion-menu"
+    >
+      <div class="card-header">
+        <div class="row apx-side-heading">
+          <div class="col">
+            <span>Editoras</span>
+          </div>
+          <div class="col-auto">
+            <button
+              class="menu__btn menu__btn--close btn"
+              type="button"
+              onclick="toggleSidenav()"
+              aria-label="Toggle Side Navigation"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18M6 6L18 18" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="menu__list">
+        <% brands.forEach((subcategory, index) => { %>
+          <a
+            href="/<%= subcategory.slug %>"   
+            class="menu__item"               
+          >
+            <span>
+              <%= subcategory.name.toLowerCase() %>
+            </span>
+          </a>
+        <% }) %>
+      </div>
+    </div>
+    <% for (const slug in categoryParents) { %>
+      
+      <% if (categoryParents.hasOwnProperty(slug)) { %>
+        <% let category, parent %>
+        <div
+          <% if (slug === '_') { %>
+            id="categories-nav"
+            class="collapse show"
+            aria-expanded="true"
+          <% } else { %>
+            id="<%= getSubmenuId(slug) %>"
+            class="collapse"
+            aria-expanded="false"
+          <% } %>
+          data-parent="#accordion-menu"
+        >
+
+          <% if (slug !== '_') { %>
+            <% category = _.categories.find(category => category.slug === slug) %>
+            <% parent = category && category.parent %>
+            <div class="card-header">
+              <div class="row apx-side-heading">
+                <div class="col">
+                  <span><%= category.name.toLowerCase() %></span>
+                </div>
+                <div class="col-auto">
+                  <!-- <button
+                    class="menu__btn btn"
+                    type="button"
+                    data-toggle="collapse"
+                    <% if (!parent || !parent.slug) { %>
+                      aria-expanded="true"
+                      data-target="#categories-nav"
+                      aria-controls="categories-nav"
+                    <% } else {
+                      const submenuId = getSubmenuId(parent.slug)
+                      %>
+                      aria-expanded="false"
+                      data-target="#<%= submenuId %>"
+                      aria-controls="<%= submenuId %>"
+                    <% } %>
+                  > -->
+                  <button
+      class="menu__btn menu__btn--close btn"
+      type="button"
+      onclick="toggleSidenav()"
+      aria-label="Toggle Side Navigation"
+    >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18M6 6L18 18" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          
+          <div class="menu__list">
+            <% categoryParents[slug].forEach((subcategory, index) => { %>
+              <% const hasSubmenu = Array.isArray(categoryParents[subcategory.slug]) %>
+              <a
+                <% if (hasSubmenu) {
+                  const submenuId = getSubmenuId(subcategory.slug)
+                  %>
+                  href="#<%= submenuId %>"
+                  data-toggle="collapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="<%= submenuId %>"
+                <% } else { %>
+                  href="/<%= subcategory.slug %>"
+                <% } %>
+                id="c-<%= subcategory._id %>"
+                class="menu__item"
+              >
+                <% if (subcategory.icon) { %>
+                  <span class="menu__item-icon">
+                    <img
+                      data-src="<%= subcategory.icon.url %>"
+                      alt="<%= subcategory.icon.alt || subcategory.name %>"
+                      class="lozad"
+                      data-preload="<%= (index * 200) %>"
+                    >
+                  </span>
+                <% } %>
+                <span>
+                  <%= subcategory.name.toLowerCase() %>
+                </span>
+              </a>
+            <% }) %>
+            <a href="#a-editoras" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="a-editoras" id="c-x" class="menu__item">
+              <span>
+                Editoras
+              </span>
+            </a>
+          </div>
+
+          <% if (category && category.slug) { %>
+            <a href="/<%= category.slug %>" class="menu__link">
+              <%= _.dictionary('seeAll$1Category').replace('$1', category.name) %>
+            </a>
+          <% } %>
+        </div>
+      <% } %>
+    <% } %>
+    
+  </nav>
+
+ 
+</aside>
+  

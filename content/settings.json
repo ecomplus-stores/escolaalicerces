@@ -1,0 +1,26 @@
+{
+  "domain": "lojaler.com.br",
+  "currency_symbol": "R$",
+  "primary_color": "#084f53",
+  "theme": {
+    "bootswatch": "_",
+    "custom": "clean-white"
+  },
+  "bg_color": "#ffffff",
+  "repository": "ecomplus-stores/ministerioler",
+  "logo": "/img/uploads/jobflow.png",
+  "name": "Loja LER",
+  "short_name": "Loja LER",
+  "lang": "pt_br",
+  "currency": "BRL",
+  "mini_logo": "",
+  "font_family": "_",
+  "favicon": "/img/uploads/fav.png",
+  "icons_font": "_",
+  "country_code": "BR",
+  "secondary_color": "#4f4f4f",
+  "icon": "/img/uploads/fav.png",
+  "store_id": 51504,
+  "description": "ministerioler",
+  "large_icon": "/img/uploads/fav.png"
+}
