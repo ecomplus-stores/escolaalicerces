@@ -1,0 +1,52 @@
+<% if (Array.isArray(opt.banners) && opt.banners.length) {
+  const title = opt.title ||
+    (opt.collection && opt.collection.name) ||
+    _.dictionary('popularProducts')
+  const link = opt.link || 'javascript:;'
+
+  %>
+
+  <section
+    class="apx-list-image"
+    data-title="<%= title %>"
+  >
+    <div class="<%= opt.container %>">
+      <div class="d-flex justify-content-between align-items-center">
+        <% if (opt.title) { %>
+          <h4 class="apx-section-title font-weight-700">
+            <%= title %>
+          </h4>
+          <% if (link) { %>
+            <a href="<%= link %>" class="d-block font-weight-600">
+              Ver Todos
+            </a>
+          <% } %>
+        <% } %>
+      </div>
+      <% if (Array.isArray(opt.banners) && opt.banners.length) { %>
+        <div class="row">
+          <% for (let i = 0; i < opt.banners.length; i++) { %>
+            <div class="item col-auto">
+              <a href="<%= opt.banners[i].link || 'javascript:;' %>">
+                <div class="pic">
+                  <img
+                    class="img-responsive w-100"
+                    loading="lazy"
+                    src="<%= opt.banners[i].img.replace('.webp', '.png') %>"
+                    alt="<%= opt.banners[i].title %>"                 
+                  />    
+                </div>
+                <h4><%= opt.banners[i].title %></h4>
+              </a>
+            </div>
+          <% } %>
+        </div>
+      <% } %>
+    </div>
+    
+
+    
+
+    
+  </section>
+<% } %>
