@@ -1,0 +1,35 @@
+{
+  "sections": [
+    {
+      "type": "breadcrumbs",
+      "enabled": true
+    },
+    {
+      "type": "product-block",
+      "enabled": true,
+      "size_guide": {
+        "image": "",
+        "title": ""
+      }
+    },
+    
+    {
+      "type": "product-description",
+      "title": "Quem comprou este produto, também comprou:",
+      "enabled": true
+    },
+    {
+      "type": "product-specifications",
+      "enabled": true
+    },
+    {
+      "type": "recommended-products",
+      "title": "Quem comprou, também levou",
+      "show_loading": true
+    },
+    {
+      "type": "related-products",
+      "title": "Você também pode gostar"
+    }
+  ]
+}
