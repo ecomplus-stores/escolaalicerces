@@ -1,0 +1,14 @@
+
+<% if (Array.isArray(opt.banners) && opt.banners.length) { %>
+
+  <div class="<%= opt.container %>">
+    <div class="row breakline-<%= opt.breakline %> grid-type-<%= opt.grid %>">
+      <% for (let i = 0; i < opt.banners.length; i++) { %>
+        <div class="item col-auto">
+          <%- await include('@/sections/inc/apx_banner', { _, opt: opt.banners[i] }) %>          
+        </div>
+      <% } %>
+    </div>
+  </div>
+  
+<% } %>
