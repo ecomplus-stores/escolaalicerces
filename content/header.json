@@ -1,0 +1,27 @@
+{
+  "categories_list": {
+    "featured": [
+      "/livros?Livros",
+      "/autores?Autores",
+      "/promocoes?Promoções"
+    ],
+    "random": 6,
+    "full_width": false
+  },
+  "menu_all_departments": false,
+  "centralized_logo": false,
+  "marketing_stripe": {
+    "text": "Aproveite nossos descontos de até 50%!",
+    "link": "/promotion"
+  },
+  "alphabetical_order_submenu": true,
+  "name_all_departments": "",
+  "search_input": true,
+  "desktop_megamenu": false,
+  "full_width_submenu": false,
+  "contacts_stripe": {
+    "pages": [],
+    "phone_wpp": false,
+    "socials": false
+  }
+}

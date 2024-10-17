@@ -1,0 +1,26 @@
+{
+  "domain": "ministerioler.netlify.app",
+  "currency_symbol": "R$",
+  "primary_color": "#084f53",
+  "theme": {
+    "bootswatch": "_",
+    "custom": "clean-white"
+  },
+  "bg_color": "#ffffff",
+  "repository": "ecomplus-stores/ministerioler",
+  "logo": "/img/uploads/logoll1.png",
+  "name": "LojaLer",
+  "short_name": "Loja Ler",
+  "lang": "pt_br",
+  "currency": "BRL",
+  "mini_logo": "",
+  "font_family": "_",
+  "favicon": "/img/uploads/icon.png",
+  "icons_font": "_",
+  "country_code": "BR",
+  "secondary_color": "#4f4f4f",
+  "icon": "/img/uploads/icon.png",
+  "store_id": 51504,
+  "description": "ministerioler",
+  "large_icon": "/img/uploads/icon.png"
+}
