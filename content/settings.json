@@ -1,5 +1,5 @@
 {
-  "domain": "escolaalicerces.netlify.app",
+  "domain": "https://escolas-alicerces.web.app/",
   "currency_symbol": "R$",
   "primary_color": "#084f53",
   "theme": {
@@ -7,10 +7,9 @@
     "custom": "clean-white"
   },
   "bg_color": "#ffffff",
-  "repository": "ecomplus-stores/ministerioler",
   "logo": "/img/uploads/jobflow.png",
-  "name": "Loja LER",
-  "short_name": "Loja LER",
+  "name": "escolaalicerces",
+  "short_name": "escolaalicerces",
   "lang": "pt_br",
   "currency": "BRL",
   "mini_logo": "",
@@ -21,6 +20,6 @@
   "secondary_color": "#4f4f4f",
   "icon": "/img/uploads/fav.png",
   "store_id": 51504,
-  "description": "ministerioler",
+  "description": "escolaalicerces",
   "large_icon": "/img/uploads/fav.png"
 }
